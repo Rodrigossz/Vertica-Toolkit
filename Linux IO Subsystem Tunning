@@ -1,0 +1,17 @@
+Linux I/O Subsystem Tuning
+To support the maximum performance of your VM, review the following recommendations.
+Vertica Data Location Volumes
+Configure the following settings for the volumes that store your database files:
+The recommended Linux file system is ext4.
+The recommended Linux I/O Scheduler is deadline.
+The recommended Linux readahead setting is 4096 512-byte sectors (4 MB).
+Have more than one volume for better organization. For example, you may have one volume of operating system and Vertica software, and another volume for the database catalog and data. This recommendation has no performance implications in a virtualized environment, unless the volumes are on different physical disks.
+System administrators should configure the deadline scheduler and the readahead settings for the Vertica data volume so that these settings persist each time that a server restarts. To make sure those settings persist, add the following lines to the /etc/rc.local file:
+echo deadline>/sys/block/sdb/queue/scheduler 
+ blockdev --setra 4096 /dev/sdb 
+ echo never>/sys/kernel/mm/redhat_transparent_hugepage/enabled 
+ echo never>/sys/kernel/mm/redhat_transparent_hugepage/defrag 
+ echo no>/sys/kernel/mm/redhat_transparent_hugepage/khugepaged/defrag
+Caution 
+
+Failure to follow the recommended Linux I/O subsystem settings can adversely affect Vertica performance.
