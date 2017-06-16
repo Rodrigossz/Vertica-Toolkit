@@ -1,2 +1,2 @@
 # Vertica
-Admin Scripts for HP Vertica Big Data Database.
+Scripts, good practices and suggestions for HP Vertica Big Data Database.
