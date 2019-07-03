@@ -8,4 +8,4 @@ Scripts, good practices and suggestions for HP Vertica Big Data Database. There 
 
 + **Kit** has only SQL scripts.
 
-For more information, contact me [here](https://www.linkedin.com/in/rodrigossz/)
+For more information, contact me [here](https://www.linkedin.com/in/rodrigossz/).
