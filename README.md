@@ -1,9 +1,6 @@
-# HP Vertica Tool Ket
+# HP Vertica Tool Kit
 
 Scripts, good practices and suggestions for HP Vertica Big Data Database.
-
-v-sql-tb
-==========
 
 Vertica SQL Toolbelt
 --------------------
