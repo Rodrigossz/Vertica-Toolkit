@@ -92,7 +92,7 @@ Directory Structure
 
 ## FAQ
 
-+ Why not modify the history retention parameter in the data collector tables?
+### Why not modify the history retention parameter in the data collector tables?
 
 An alternative to creating custom history tables is to find the data collection
 table that make up the v_monitor objects and extend the history retention
@@ -111,7 +111,7 @@ EXPLAIN SELECT * FROM v_monitor.query_plan_profiles;
 This package gives us the capability to save disk space by only capturing
 history for specific events. 
 
-+ Why do you strip out carriage returns, line feeds and tabs from the query string?
+### Why do you strip out carriage returns, line feeds and tabs from the query string?
 
 Stripping out these characters makes it possible to copy and paste the results 
 into Excel using Excel's default parsing options. If we left those characters
